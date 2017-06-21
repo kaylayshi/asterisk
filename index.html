@@ -2,47 +2,49 @@
 <html>
 <head>
 <title>ONLINE Calculator</title>
-<link rel="stylesheet" href="css/index.css" type="text/css">
+<link rel="stylesheet" href="index.css" type="text/css">
 <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
 <div class="container">
 <marquee class="shakara">Made by Kayce!</marquee>
-<input type="text" size="36" id="display" ><br>
-
+<div class="display"><input type="text" size="36" id="display" readonly ></div>
+<div class="keys">
 <p>
 <input type="button" class="button" value="C" onclick="display.value=''">
-<input type="button" class="button" value="CE" onclick="display.value=''">
-<input type="button" class="button" value="%" onclick="display.value+='%'">
-<input type="button" class="button" value="/" onclick="display.value+='/'">
+<input type="button" class="button" value="CE" onclick='CE("")'>
+<input type="button" class="button" value="%" onclick='math("%")'>
+<input type="button" class="button" value="/" onclick='math("/")'>
 </p>
 
 <p>
-<input type="button" class="button" value="9" onclick="display.value+='9'">
-<input type="button" class="button" value="8" onclick="display.value+='8'">
-<input type="button" class="button" value="7" onclick="display.value+='7'">
-<input type="button" class="button" value="*" onclick="display.value+='*'">
+<input type="button" class="button" value="9" onclick='math("9")'>
+<input type="button" class="button" value="8" onclick='math("8")'>
+<input type="button" class="button" value="7" onclick='math("7")'>
+<input type="button" class="button" value="*" onclick='math("*")'>
 </p>
 
 <p>
-<input type="button" class="button" value="6" onclick="display.value+='6'">
-<input type="button" class="button" value="5" onclick="display.value+='5'">
-<input type="button" class="button" value="4" onclick="display.value+='4'">
-<input type="button" class="button" value="-" onclick="display.value+='-'">
+<input type="button" class="button" value="6" onclick='math("6")'>
+<input type="button" class="button" value="5" onclick='math("5")'>
+<input type="button" class="button" value="4" onclick='math("4")'>
+<input type="button" class="button" value="-" onclick='math("-")'>
 </p>
 
 <p>
-<input type="button" class="button" value="3" onclick="display.value+='3'">
-<input type="button" class="button" value="2" onclick="display.value+='2'">
-<input type="button" class="button" value="1" onclick="display.value+='1'">
-<input type="button" class="button" value="+" onclick="display.value+='+'">
+<input type="button" class="button" value="3" onclick='math("3")'>
+<input type="button" class="button" value="2" onclick='math("2")'>
+<input type="button" class="button" value="1" onclick='math("1")'>
+<input type="button" class="button" value="+" onclick='math("+")'>
 </p>
 
 <p>
-<input type="button" class="button" value="0" onclick="display.value+='0'">
-<input type="button" class="button" value="." onclick="display.value+='.'">
- <input type="button" id="equal" value="=" onclick="display.value=eval(display.value)">
+<input type="button" class="button" value="0" onclick='math("0")'>
+<input type="button" class="button" value="." onclick='math(".")'>
+<input type="button" id="equal" value="=" onclick='e("")'>
 </p>
+</div>
+</div>
 
 
 </body>

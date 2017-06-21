@@ -1,10 +1,11 @@
+
 .container
 {
 	margin:150px;
 	text-align: center;	
 	border-style: dotted;
 	border-color: black;
-	border-radius: 5px;
+	border-radius: 10px;
 	margin-top: 25px;
 	width:300px;
 	background-color: yellow;
@@ -24,11 +25,18 @@
 	text-decoration: none;
 	font-family: Times;
 	font-size: 30px;
+	position: relative;
 }
 #equal:hover
 {
 	color:red;
 	background-color:white;
+}
+#equal:active
+{
+	color: red;
+	transform:translatey(4px);
+	opacity: 0.1;
 }
 #equal
 {
@@ -48,6 +56,7 @@
 	background:black;
 	color:white;
 	border-radius:5px;
+	position:relative;
 }
 .button:hover
 {
@@ -57,4 +66,6 @@
 .button:active
 {
 	color: red;
+	transform:translatey(4px);
+	opacity: 0.1;
 }
