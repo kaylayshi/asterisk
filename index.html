@@ -1,48 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="calculatorApp">
 <head>
 <title>ONLINE Calculator</title>
 <link rel="stylesheet" href="css/index.css" type="text/css">
-<script type="text/javascript" src="js/index.js"></script>
+<!-- <script type="text/javascript" src="js/index.js"></script> -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
 </head>
 <body style="background-image:url(back-image.jpg)">
 <h3>CALCULATOR</h3>
-<div class="container">
+<div class="container" ng-controller="CalculatorCtrl as ctrl">
 <marquee class="shakara">Made by Kayce!</marquee>
-<div class="display"><input type="text" size="36" id="display" readonly ></div>
+<div class="display"><input type="text" value="{{display}}" size="36" id="display" readonly ></div>
 <div class="keys">
 <p>
-<input type="button" class="button" value="C" onclick="display.value=''">
-<input type="button" class="button" value="CE" onclick='CE("")'>
-<input type="button" class="button" value="%" onclick='math("%")'>
-<input type="button" class="button" value="/" onclick='math("/")'>
+<input type="button" class="button" value="C" ng-click="clear()">
+<input type="button" class="button" value="CE" ng-click="CE()">
+<input type="button" class="button" value="%" ng-click='math("%")'>
+<input type="button" class="button" value="/" ng-click='math("/")'>
 </p>
 
 <p>
-<input type="button" class="button" value="9" onclick='math("9")'>
-<input type="button" class="button" value="8" onclick='math("8")'>
-<input type="button" class="button" value="7" onclick='math("7")'>
-<input type="button" class="button" value="*" onclick='math("*")'>
+<input type="button" class="button" value="9" ng-click='math("9")'>
+<input type="button" class="button" value="8" ng-click='math("8")'>
+<input type="button" class="button" value="7" ng-click='math("7")'>
+<input type="button" class="button" value="*" ng-click='math("*")'>
 </p>
 
 <p>
-<input type="button" class="button" value="6" onclick='math("6")'>
-<input type="button" class="button" value="5" onclick='math("5")'>
-<input type="button" class="button" value="4" onclick='math("4")'>
-<input type="button" class="button" value="-" onclick='math("-")'>
+<input type="button" class="button" value="6" ng-click='math("6")'>
+<input type="button" class="button" value="5" ng-click='math("5")'>
+<input type="button" class="button" value="4" ng-click='math("4")'>
+<input type="button" class="button" value="-" ng-click='math("-")'>
 </p>
 
 <p>
-<input type="button" class="button" value="3" onclick='math("3")'>
-<input type="button" class="button" value="2" onclick='math("2")'>
-<input type="button" class="button" value="1" onclick='math("1")'>
-<input type="button" class="button" value="+" onclick='math("+")'>
+<input type="button" class="button" value="3" ng-click='math("3")'>
+<input type="button" class="button" value="2" ng-click='math("2")'>
+<input type="button" class="button" value="1" ng-click='math("1")'>
+<input type="button" class="button" value="+" ng-click='math("+")'>
 </p>
 
 <p>
-<input type="button" class="button" value="0" onclick='math("0")'>
-<input type="button" class="button" value="." onclick='math(".")'>
-<input type="button" id="equal" value="=" onclick='e("")'>
+<input type="button" class="button" value="0" ng-click='math("0")'>
+<input type="button" class="button" value="." ng-click='math(".")'>
+<input type="button" id="equal" value="=" ng-click="e()">
 </p>
 </div>
 <h6>Powered By&sext;</h6>
